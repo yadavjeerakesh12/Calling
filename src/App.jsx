@@ -66,7 +66,7 @@ function App() {
             </button>
             {/* Video Call */}
             <button
-              onClick={() =>invite(ZegoUIKitPrebuilt.InvitationTypeVoiceCall)}
+              onClick={() =>invite(ZegoUIKitPrebuilt.InvitationTypeVideoCall)}
               className=" group w-full py-3 rounded-xl border border-cyan-400 bg-cyan-500/10 text-cyan-400 font-semibold text-base sm:text- transition-all duration-300 ease- hover:bg-cyan-500 hover:text-white hover:scale-[1.03] hover:shadow-[0_0_25px_rgba(34,211,238,0.5 active:scale-95">
               <span className="inline-block mr-2 transition-transform duration-300 group-hover:scale-125">
                 🎥
