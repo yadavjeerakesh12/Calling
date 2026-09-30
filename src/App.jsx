@@ -5,10 +5,10 @@ import { ZegoUIKitPrebuilt } from '@zegocloud/zego-uikit-prebuilt';
 import { useEffect, useRef } from 'react';
 function App() {
   const zpRef = useRef(null);
-  const userID = "user" + Math.floor(Math.random() * 1000);
-  const userName = "Person" + userID;
+  const userID = "User" + Math.floor(Math.random() * 1000);
+  const userName = "" + userID;
   const appID = 1823207890;
-  const serverSecret = "e2a1bac849af5bf27f72f1ecb6d1788a";
+  const serverSecret = import.meta.env.VITE_KEY;
   const TOKEN = ZegoUIKitPrebuilt.generateKitTokenForTest(appID, serverSecret, null, userID, userName);
   useEffect(() => {
     const zp = ZegoUIKitPrebuilt.create(TOKEN);
@@ -25,10 +25,10 @@ function App() {
       callType: callType,
       timeout: 60, // Timeout duration (second). 60s by default, range from [1-600s].
     }).then((res) => {
-      console.warn(res);
+      alert(res);
     })
       .catch((err) => {
-        console.warn(err);
+        alert(err);
       });
   }
   return (
